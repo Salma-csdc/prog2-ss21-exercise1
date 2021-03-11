@@ -86,24 +86,65 @@ class CheckPasswordTest {
     // test Sonderzeichen
     @Test
     void testsonderzeichen_Scenario1() {
-        boolean actual = password.sonderzeichen("Salma");
+        boolean actual = password.checkSonderzeichen("Salma");
         boolean expected = false;
         assertEquals(expected, actual);
     }
 
     @Test
     void testsonderzeichen_Scenario2() {
-        boolean actual = password.sonderzeichen("$@lm@");
+        boolean actual = password.checkSonderzeichen("$@lm@");
         boolean expected = true;
         assertEquals(expected, actual);
     }
 
     @Test
     void testsonderzeichen_Scenario3() {
-        boolean actual = password.sonderzeichen("Salma:");
+        boolean actual = password.checkSonderzeichen("Salma:");
         boolean expected = false;
         assertEquals(expected, actual);
     }
+/*
+    // test dreizahlen in Folge hintereinander --> false ausgeben
+    @Test
+    void testdigits_Scenario1(){
+        boolean actual = password.checkdreiZahlen("Salma1234");// Alarm schlagen
+        boolean expected = false;
+        assertEquals(expected, actual);}
+    @Test
+    void testdigits_Scenario2(){
+        boolean actual = password.checkdreiZahlen("Sa1lm2a12");
+        boolean expected = true;
+        assertEquals(expected, actual);}
+    @Test
+    void testdigits_Scenario3(){
+        boolean actual = password.checkdreiZahlen("Sa1lm2a458");
+        boolean expected = true;
+        assertEquals(expected, actual);}
+    @Test
+    void testdigits_Scenario4(){
+        boolean actual = password.checkdreiZahlen("Sa1lm2a456");// Alarm schlagen
+        boolean expected = false;
+        assertEquals(expected, actual);}
+
+    // test dieselbe Zahl >3x hintereinander --> false ausgeben
+    @Test
+    void testsamedigit_Scenario1(){
+        boolean actual = password.checkselbeZahl("Sa1lm2a1111");// Alarm schlagen
+        boolean expected = false;
+        assertEquals(expected, actual);}
+    @Test
+    void testsamedigit_Scenario2(){
+        boolean actual = password.checkselbeZahl("1Salma21101111");// Alarm schlagen
+        boolean expected = false;
+        assertEquals(expected, actual);}
+    @Test
+    void testsamedigit_Scenario3(){
+        boolean actual = password.checkselbeZahl("1Salma2110");
+        boolean expected = true;
+        assertEquals(expected, actual);}
+
+ */
 }
 
 
