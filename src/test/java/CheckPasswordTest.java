@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+// URL: https://github.com/Salma-csdc/prog2-ss21-exercise1.git
+// bitte die branch namens "refactoring_WRP" öffnen, da die URL leider immer die (unvollstaendige) branch main öffnet
+
 class CheckPasswordTest {
 
     CheckPassword password;
@@ -104,7 +107,7 @@ class CheckPasswordTest {
         boolean expected = false;
         assertEquals(expected, actual);
     }
-/*
+
     // test dreizahlen in Folge hintereinander --> false ausgeben
     @Test
     void testdigits_Scenario1(){
@@ -126,7 +129,18 @@ class CheckPasswordTest {
         boolean actual = password.checkdreiZahlen("Sa1lm2a456");// Alarm schlagen
         boolean expected = false;
         assertEquals(expected, actual);}
+    @Test
+    void testdigits_Scenario5(){
+        boolean actual = password.checkdreiZahlen("Sa1lm2abcd3");
+        boolean expected = true;
+        assertEquals(expected, actual);}
+    @Test
+    void testdigits_Scenario6(){
+        boolean actual = password.checkdreiZahlen("Sa12m3h456");// Alarm schlagen
+        boolean expected = false;
+        assertEquals(expected, actual);}
 
+/*
     // test dieselbe Zahl >3x hintereinander --> false ausgeben
     @Test
     void testsamedigit_Scenario1(){
@@ -143,8 +157,8 @@ class CheckPasswordTest {
         boolean actual = password.checkselbeZahl("1Salma2110");
         boolean expected = true;
         assertEquals(expected, actual);}
+*/
 
- */
 }
 
 
