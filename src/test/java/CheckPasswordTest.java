@@ -140,7 +140,6 @@ class CheckPasswordTest {
         boolean expected = false;
         assertEquals(expected, actual);}
 
-/*
     // test dieselbe Zahl >3x hintereinander --> false ausgeben
     @Test
     void testsamedigit_Scenario1(){
@@ -157,7 +156,7 @@ class CheckPasswordTest {
         boolean actual = password.checkselbeZahl("1Salma2110");
         boolean expected = true;
         assertEquals(expected, actual);}
-*/
+
 
 }
 
