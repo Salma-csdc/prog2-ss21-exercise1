@@ -58,7 +58,7 @@ public class CheckPassword {
         char currentvalue;
         for (int i = 0; i < kennwort.length(); i++) {
             currentvalue = kennwort.charAt(i);
-            for(char c : SONDERZEICHEN) {
+            for(int c = 0; c<9; c++) {
                 if (currentvalue == SONDERZEICHEN[c]) {
                     a = true;
                 }
